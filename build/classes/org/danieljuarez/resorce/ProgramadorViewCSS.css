@@ -1,0 +1,44 @@
+
+/* 
+    Created on : 5/05/2021, 09:45:34 PM
+    Author     : Daniel Juárez
+*/
+
+.anchorPane1
+{
+    -fx-background-color:  #1F11CE;
+    -fx-background-radius: 0 0 0 0;
+}
+/*50 10 50 10;*/
+
+.anchorPane2
+{
+    -fx-background-color:  #0FCFE5;
+    -fx-background-radius: 10 10 10 10;
+}
+
+
+.textFiel1
+{
+    -fx-background-color:  #1CA4A4;
+    -fx-background-radius: 10 10 10 10;
+}
+
+
+.button1
+{
+    -fx-background-color: #59C6C6;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.button1:hover
+{
+    -fx-background-color: #14F4FF;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.button1:pressed
+{
+    -fx-background-color: #1606DD;
+    -fx-background-radius: 50 10 50 10;
+}

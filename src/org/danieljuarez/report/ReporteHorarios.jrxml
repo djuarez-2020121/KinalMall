@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteHorarios" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5cd00ce2-8b88-473e-8f5f-9077fd9a88e2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarHorarios();]]>
+	</queryString>
+	<field name="codigoHorario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lunes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="martes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="miercoles" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jueves" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="viernes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="004f1dec-e357-49a8-b63c-2916609f0c96"/>
+				<imageExpression><![CDATA["F:\\Documentos\\NetBeansProjects\\membrete.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="425" y="21" width="147" height="27" forecolor="#FFFFFF" uuid="6396522c-584f-4fb5-ba4f-4e436e0d3b8a"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Horarios]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="108" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="7a22ddb9-4edf-4923-a28a-9fd42ffb7a85"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Horario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="2" width="65" height="20" forecolor="#FFFFFF" uuid="f7673017-bf6d-4b9c-9d90-a614006fda91"/>
+				<text><![CDATA[Hora Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="0" width="62" height="20" forecolor="#FFFFFF" uuid="80833ec2-30b5-44ec-8616-7c64bf264277"/>
+				<text><![CDATA[Hora Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="0" width="32" height="20" forecolor="#FFFFFF" uuid="179f9151-2758-4dca-88f8-01bb8010a301"/>
+				<text><![CDATA[Lunes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="0" width="41" height="20" forecolor="#F0F0F0" uuid="18551e19-8a0b-4c38-bf86-60d0beb69a88"/>
+				<text><![CDATA[Martes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="60" height="20" forecolor="#F0F0F0" uuid="6c94dfe7-7e09-4de2-95be-88d692f357c0"/>
+				<text><![CDATA[Miércoles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="33" height="20" forecolor="#F0F0F0" uuid="62442219-bdcd-4e77-aefc-22caa4973840"/>
+				<text><![CDATA[Jueves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="0" width="41" height="20" forecolor="#F0F0F0" uuid="76ef86e3-739b-428e-98b6-591d044eb1e8"/>
+				<text><![CDATA[Viernes]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="52" y="0" width="58" height="20" forecolor="#FFFFFF" uuid="fdcf86b1-84ad-4908-be24-4270f3c31f95"/>
+				<textFieldExpression><![CDATA[$F{codigoHorario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="0" width="76" height="20" forecolor="#FFFFFF" uuid="20851bf6-3fb1-49ef-9bb6-eb61166121b4"/>
+				<textFieldExpression><![CDATA[$F{horaEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="0" width="32" height="20" forecolor="#FFFFFF" uuid="06c47292-6f07-40ca-9174-8bfaa49697bf"/>
+				<textFieldExpression><![CDATA[$F{lunes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="0" width="27" height="20" forecolor="#F0F0F0" uuid="84ea6478-a006-4644-881d-84528b244d27"/>
+				<textFieldExpression><![CDATA[$F{martes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="0" width="72" height="20" forecolor="#FFFFFF" uuid="e80cdd3a-d165-43fe-8323-843577ea36f6"/>
+				<textFieldExpression><![CDATA[$F{horaSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="28" height="20" forecolor="#F0F0F0" uuid="f041da3e-aaed-4d8d-9c3a-9f60f44f24d7"/>
+				<textFieldExpression><![CDATA[$F{miercoles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="41" height="20" forecolor="#F0F0F0" uuid="764cfe3f-95b1-4303-a924-9d49b7ea3dbe"/>
+				<textFieldExpression><![CDATA[$F{viernes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="21" height="20" forecolor="#FFFFFF" uuid="2839776d-91f1-4659-bd0d-594e62768193"/>
+				<textFieldExpression><![CDATA[$F{jueves}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

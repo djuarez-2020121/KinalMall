@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danieljuarez.controller.TipoClienteController">
+   <children>
+      <Pane prefHeight="471.0" prefWidth="236.0" styleClass="anchorPane1" stylesheets="@../resorce/TipoClienteCSS.css">
+         <children>
+            <TextField editable="false" layoutX="-6.0" layoutY="-3.0" prefHeight="42.0" prefWidth="242.0" styleClass="textFiel1" stylesheets="@../resorce/TipoClienteCSS.css" text="             Tipo Cliente">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+            <ImageView fitHeight="50.0" fitWidth="100.0" layoutY="422.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/regregsarMenu.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnNuevo" layoutX="18.0" layoutY="199.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="40.0" prefWidth="195.0" styleClass="button1" stylesheets="@../resorce/TipoClienteCSS.css" text="Nuevo">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="18.0" layoutY="245.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="40.0" prefWidth="195.0" styleClass="button1" stylesheets="@../resorce/TipoClienteCSS.css" text="Eliminar">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="18.0" layoutY="294.0" mnemonicParsing="false" onAction="#editar" prefHeight="40.0" prefWidth="195.0" styleClass="button1" stylesheets="@../resorce/TipoClienteCSS.css" text="Editar">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" layoutX="18.0" layoutY="341.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="40.0" prefWidth="195.0" styleClass="button1" stylesheets="@../resorce/TipoClienteCSS.css" text="Reporte">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imgNuevo" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/agregar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgEliminar" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/eliminar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgEditar" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/editar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgReporte" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/reporte.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="167.0" fitWidth="242.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/tipocliente.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="236.0" layoutY="-10.0" prefHeight="189.0" prefWidth="654.0" styleClass="anchorPane2" stylesheets="@../resorce/TipoClienteCSS.css">
+         <children>
+            <Button layoutX="143.0" layoutY="58.0" mnemonicParsing="false" styleClass="button2" stylesheets="@../resorce/TipoClienteCSS.css" text="Código tipo cliente">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtCodigoTipoCliente" editable="false" layoutX="277.0" layoutY="60.0" prefHeight="25.0" prefWidth="165.0" />
+            <Button layoutX="144.0" layoutY="123.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="127.0" styleClass="button2" stylesheets="@../resorce/TipoClienteCSS.css" text="Descripción">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtDireccion" editable="false" layoutX="277.0" layoutY="125.0" prefHeight="25.0" prefWidth="165.0" />
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="580.0" layoutY="73.0" onMouseClicked="#ventanaCliente" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/agregar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tblTipoCliente" layoutX="257.0" layoutY="193.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="257.0" prefWidth="616.0" styleClass="column-header-background" stylesheets="@../resorce/TipoClienteCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoCliente" prefWidth="314.0" text="Código tipo cliente" />
+          <TableColumn fx:id="colDescripcion" minWidth="0.0" prefWidth="237.0" text="Descripción" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

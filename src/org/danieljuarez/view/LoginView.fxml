@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danieljuarez.controller.LoginController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="299.0" styleClass="anchorPane1" stylesheets="@../resorce/KinalMallCSS.css">
+         <children>
+            <ImageView fitHeight="193.0" fitWidth="277.0" layoutX="11.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="294.0" prefHeight="400.0" prefWidth="306.0" styleClass="anchorPane2" stylesheets="@../resorce/KinalMallCSS.css">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="179.0" layoutX="104.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user%20(1).png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtUsuario" alignment="CENTER" layoutX="131.0" layoutY="200.0" styleClass="textFiel1" stylesheets="@../resorce/KinalMallCSS.css">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtPassword" alignment="CENTER" layoutX="131.0" layoutY="261.0" styleClass="textFiel1" stylesheets="@../resorce/KinalMallCSS.css">
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <Button layoutX="54.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" styleClass="button2" stylesheets="@../resorce/KinalMallCSS.css" text="User" />
+            <Button layoutX="54.0" layoutY="261.0" mnemonicParsing="false" styleClass="button2" stylesheets="@../resorce/KinalMallCSS.css" text="Password" />
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="21.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logearse.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="21.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/contra.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnLogin" layoutX="114.0" layoutY="307.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="89.0" styleClass="button1" stylesheets="@../resorce/KinalMallCSS.css" text="Login" />
+            <Hyperlink layoutX="110.0" layoutY="363.0" onMouseClicked="#ventanaUsuario" styleClass="button2" stylesheets="@../resorce/KinalMallCSS.css" text="Regístrese aquí..." textFill="#ffebeb">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

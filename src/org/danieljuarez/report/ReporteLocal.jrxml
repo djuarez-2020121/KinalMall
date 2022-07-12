@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteLocal" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="82664f5a-362d-491f-ab3e-0554f2802472">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarLocal();
+]]>
+	</queryString>
+	<field name="codigoLocal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoFavor" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoContra" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mesesPendientes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="disponibilidad" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorLocal" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorAdministracion" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="752" height="572" uuid="d194defb-cd3b-4e44-ba73-4999558f09bf"/>
+				<imageExpression><![CDATA["F:\\Documentos\\NetBeansProjects\\fonfo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="287" y="26" width="296" height="53" uuid="867645e2-a626-4d05-b3d6-c90ab33a828c"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Locales]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="57" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="74" height="20" uuid="bb2fc1ff-97f0-478b-9da0-31f04876aa22"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Local]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="0" width="74" height="20" uuid="246c7338-f5ee-4f10-bb59-c6f9f5619691"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo Favor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="0" width="69" height="20" uuid="f68b1a99-6a33-4e28-9854-a53203f8f193"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo Contra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="0" width="95" height="20" uuid="7538cf75-f0b0-4694-a39c-29e008b84027"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Meses Pendientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="0" width="86" height="20" uuid="b10fbb92-87bd-4d37-b52f-4666afb84062"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Disponibilidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="60" height="20" uuid="29a8eabd-d2d7-4729-8aef-90c3d7e9d1a8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor Local]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="689" y="0" width="63" height="20" uuid="52c15068-e633-4f95-98bd-509c18e44ed5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor Admin]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="15" y="0" width="59" height="20" uuid="836190a6-8c22-4848-a49f-687e1ef23dc3"/>
+				<textFieldExpression><![CDATA[$F{codigoLocal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="3" width="74" height="20" uuid="67b981d0-c890-443c-963d-4dbc75bbcb62"/>
+				<textFieldExpression><![CDATA[$F{saldoFavor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="3" width="80" height="20" uuid="e9853d24-4dab-41b6-bc24-0dc273933c05"/>
+				<textFieldExpression><![CDATA[$F{saldoContra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="3" width="100" height="20" uuid="1ee68cc9-69fa-4dae-af4d-8410ccb0832d"/>
+				<textFieldExpression><![CDATA[$F{mesesPendientes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="3" width="74" height="20" uuid="c471c7f2-b53b-49e1-9910-ecbbcf29da74"/>
+				<textFieldExpression><![CDATA[$F{disponibilidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="612" y="3" width="60" height="20" uuid="06ea1392-9f09-4737-9868-91bda19a7ad3"/>
+				<textFieldExpression><![CDATA[$F{valorLocal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="3" width="35" height="20" uuid="42b8da13-1240-4af4-9e6f-765586e569e8"/>
+				<textFieldExpression><![CDATA[$F{valorAdministracion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="612" y="0" width="100" height="20" uuid="4116df53-f8b5-45f9-96d9-2633b9f25793"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daniel Juárez]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

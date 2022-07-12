@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="404852b9-ace0-486a-9c03-ead46c400dc7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="82"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdinistracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="b5a73c34-22a0-456d-8234-9cbf6d744127"/>
+				<imageExpression><![CDATA["F:\\Descargas\\membrete.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="59" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="10" y="21" width="548" height="30" backcolor="#009999" uuid="2cf6f565-f784-40a8-95da-f7bb435e07d2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="25" y="31" width="135" height="20" forecolor="#CCFFFF" uuid="d846ef29-3c72-4eab-8736-5bcc78c1dc68"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Código Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="31" width="135" height="20" forecolor="#CCFFFF" uuid="3aa9fbd1-bf03-4568-b47f-4e88836e6e12"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="31" width="135" height="20" forecolor="#CCFFFF" uuid="3322099c-2dba-4103-b4fa-3c404dd2bc62"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="46" y="10" width="100" height="20" forecolor="#CCFFFF" uuid="85fd5ca7-02bb-4944-a8b8-c6a118ee2e0f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="10" width="100" height="20" forecolor="#CCFFFF" uuid="8e81c402-6cfe-464c-8dc3-09ed6dc72056"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="10" width="100" height="20" forecolor="#CCFFFF" uuid="87f066c6-efda-4537-98f9-8ebac9ba183f"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="25" y="30" width="520" height="1" uuid="d80e2fe5-ef0a-42a2-946c-5f65cf111a91"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="77" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="368" y="8" width="177" height="20" forecolor="#CCFFFF" uuid="9055649c-8ea8-4c6d-83da-b0c18450288f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daniel Alejandro Juárez García]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteDepa" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9ec859df-cf96-4c76-8e1c-11110bc207c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarDepartamentos();
+]]>
+	</queryString>
+	<field name="codigoDepartamento" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreDepartamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="0722892e-ac03-4f4b-b0ec-b77b45ee7291"/>
+				<imageExpression><![CDATA["F:\\Documentos\\NetBeansProjects\\membrete.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="122" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="88" y="12" width="133" height="20" forecolor="#CCFFFF" uuid="51a5815f-35d1-430b-ab89-1ad578881bc6"/>
+				<text><![CDATA[Código Departamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="12" width="133" height="20" forecolor="#CCFFFF" uuid="260c409c-0952-4961-a720-a7599cc16fd9"/>
+				<text><![CDATA[Nombre Departamento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="98" y="20" width="100" height="20" forecolor="#CCFFFF" uuid="442ba0ec-dc48-4661-a9b8-c165028ad422"/>
+				<textFieldExpression><![CDATA[$F{codigoDepartamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="20" width="100" height="20" forecolor="#CCFFFF" uuid="bf2e73cc-75ab-4c69-9675-82ddb27e44c2"/>
+				<textFieldExpression><![CDATA[$F{nombreDepartamento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

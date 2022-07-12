@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danieljuarez.controller.AdministracionController">
+   <children>
+      <ImageView fitHeight="490.0" fitWidth="819.0" layoutX="236.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoAdmin.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="-27.0" prefHeight="450.0" prefWidth="260.0" styleClass="anchorPane1" stylesheets="@../resorce/AdministradorCSS.css">
+         <children>
+            <ImageView fitHeight="164.0" fitWidth="264.0" layoutX="-4.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/admin.png" />
+               </image>
+            </ImageView>
+            <TextField alignment="CENTER" editable="false" layoutX="-4.0" layoutY="22.0" prefHeight="31.0" prefWidth="264.0" styleClass="textFiel1" stylesheets="@../resorce/AdministradorCSS.css" text="Administración.">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnNuevo" layoutX="34.0" layoutY="210.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="40.0" prefWidth="195.0" styleClass="button1" stylesheets="@../resorce/AdministradorCSS.css" text="Nuevo">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="34.0" layoutY="257.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="40.0" prefWidth="195.0" styleClass="button1" stylesheets="@../resorce/AdministradorCSS.css" text="Eliminar">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="34.0" layoutY="303.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="195.0" styleClass="button1" stylesheets="@../resorce/AdministradorCSS.css" text="Editar">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" layoutX="34.0" layoutY="346.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="37.0" prefWidth="195.0" styleClass="button1" stylesheets="@../resorce/AdministradorCSS.css" text="Reporte">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imgNuevo" fitHeight="30.0" fitWidth="30.0" layoutX="54.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/agregar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgEliminar" fitHeight="30.0" fitWidth="30.0" layoutX="53.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/eliminar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgEditar" fitHeight="30.0" fitWidth="30.0" layoutX="52.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/editar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgReporte" fitHeight="30.0" fitWidth="30.0" layoutX="52.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/reporte.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="82.0" layoutX="-1.0" layoutY="390.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/regregsarMenu.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="259.0" prefHeight="170.0" prefWidth="733.0" styleClass="anchorPane2" stylesheets="@../resorce/AdministradorCSS.css">
+         <children>
+            <Button layoutX="232.0" layoutY="75.0" mnemonicParsing="false" styleClass="button2" stylesheets="@../resorce/AdministradorCSS.css" text="Teléfono">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtTelefono" editable="false" layoutX="314.0" layoutY="75.0" />
+            <GridPane layoutX="54.0" layoutY="14.0" prefHeight="44.0" prefWidth="583.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="170.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="126.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="123.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="124.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="177.0" styleClass="button2" stylesheets="@../resorce/AdministradorCSS.css" text="Código Administración">
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="108.0" styleClass="button2" stylesheets="@../resorce/AdministradorCSS.css" text="Dirección" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets left="3.0" />
+                     </opaqueInsets>
+                  </Button>
+                  <TextField fx:id="txtCodigoAdministracion" editable="false" prefHeight="25.0" prefWidth="90.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtDireccion" editable="false" prefHeight="25.0" prefWidth="86.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <TableView fx:id="tblAdministracion" layoutX="275.0" layoutY="181.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="227.0" prefWidth="714.0" stylesheets="@../resorce/AdministradorCSS.css">
+         <columns>
+            <TableColumn fx:id="colCodigoAdministracion" prefWidth="233.0" text="Código Administración" />
+            <TableColumn fx:id="colTelefono" prefWidth="263.0" text="Teléfono" />
+            <TableColumn fx:id="colDireccion" minWidth="0.0" prefWidth="210.0" text="Dirección" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

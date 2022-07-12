@@ -1,0 +1,113 @@
+package org.danieljuarez.bean;
+/**
+ *
+ * @author Daniel Juárez
+ */
+public class Horarios {
+//    codigoHorario int auto_increment not null,
+//    horaEntrada varchar(5) not null,
+//    horaSalida varchar(5) not null,
+//    lunes boolean,
+//    martes boolean,
+//    miercoles boolean,
+//    jueves boolean,
+//    viernes boolean,
+    //Atributos
+    private int codigoHorario;
+    private String horaEntrada;
+    private String horaSalida;
+    private boolean lunes;
+    private boolean martes;
+    private boolean miercoles;
+    private boolean jueves;
+    private boolean viernes;
+
+    
+    //Constructores
+    public Horarios() {
+    }
+
+    public Horarios(int codigoHorario, String horaEntrada, String horaSalida, boolean lunes, boolean martes, boolean miercoles, boolean jueves, boolean viernes) {
+        this.codigoHorario = codigoHorario;
+        this.horaEntrada = horaEntrada;
+        this.horaSalida = horaSalida;
+        this.lunes = lunes;
+        this.martes = martes;
+        this.miercoles = miercoles;
+        this.jueves = jueves;
+        this.viernes = viernes;
+    }
+    
+    //Metodos de acceso
+
+    public int getCodigoHorario() {
+        return codigoHorario;
+    }
+
+    public void setCodigoHorario(int codigoHorario) {
+        this.codigoHorario = codigoHorario;
+    }
+
+    public String getHoraEntrada() {
+        return horaEntrada;
+    }
+
+    public void setHoraEntrada(String horaEntrada) {
+        this.horaEntrada = horaEntrada;
+    }
+
+    public String getHoraSalida() {
+        return horaSalida;
+    }
+
+    public void setHoraSalida(String horaSalida) {
+        this.horaSalida = horaSalida;
+    }
+
+    public boolean isLunes() {
+        return lunes;
+    }
+
+    public void setLunes(boolean lunes) {
+        this.lunes = lunes;
+    }
+
+    public boolean isMartes() {
+        return martes;
+    }
+
+    public void setMartes(boolean martes) {
+        this.martes = martes;
+    }
+
+    public boolean isMiercoles() {
+        return miercoles;
+    }
+
+    public void setMiercoles(boolean miercoles) {
+        this.miercoles = miercoles;
+    }
+
+    public boolean isJueves() {
+        return jueves;
+    }
+
+    public void setJueves(boolean jueves) {
+        this.jueves = jueves;
+    }
+
+    public boolean isViernes() {
+        return viernes;
+    }
+
+    public void setViernes(boolean viernes) {
+        this.viernes = viernes;
+    }
+    
+    @Override
+    public String toString() {
+        return getCodigoHorario() +  " / "+getHoraEntrada()+  " / "+getHoraSalida();
+    }
+    
+    
+}
